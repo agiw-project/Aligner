@@ -29,7 +29,10 @@ def predict2(json_site1, json_site2, print_report, threshold):
         row_page += "\n"
         rows.append(row_page)
 
-    vectorizer = TfidfVectorizer(stop_words="english")
+    
+    my_stop_words = text.ENGLISH_STOP_WORDS.union(["NBA", "ROTOWORLD", "PROBALLERS", "Tickets:", "Facebook:",
+                                                   "Snapchat:", "Instagram:", "Twitter:"])
+    vectorizer = TfidfVectorizer(stop_words=my_stop_words)
     # vectorialize the strings of the file
     vectors = vectorizer.fit_transform(rows)
     feature_names = vectorizer.get_feature_names()
