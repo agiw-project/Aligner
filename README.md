@@ -1,6 +1,6 @@
 # Aligner
 
-Fornire nella cartella Url i file contenenti gli indirizzi URL delle entity page.<br /><br />
+Fornire nella cartella Url i file contenenti gli indirizzi URL delle entity page.(default 100 URL per file - entity-page di giocatori di basket NBA)<br /><br />
 PIPELINE:<br />
 Run main.<br />
 In caso di mancata estrazione precedente: si creeranno i file json dell'estrazione, altrimenti si passerà alla calibrazione.<br />
